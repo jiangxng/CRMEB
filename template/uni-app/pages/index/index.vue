@@ -66,11 +66,11 @@
 			</newGoods>
 			<!-- 精品推荐 -->
 			<!-- <mBanner :dataConfig="swiperBg.cc" @click.native="bindEdit('swiperBg','cc')"></mBanner> -->
-
+		
 			<!-- <titles :dataConfig="titles.default" :sty="'off'" @click.native="bindEdit('titles','default')"></titles> -->
 			<!-- 商品轮播 -->
-
-
+		
+		
 			<!-- 		<customerService :dataConfig="customerService.default" @click.native="bindEdit('customerService','default')"></customerService> -->
 			<!-- 促销单品 -->
 			<promotion :dataConfig="goodList.dd" @click.native="bindEdit('goodList','dd')">
@@ -92,32 +92,32 @@
 		</view>
 
 		<tabBar :dataConfig="tabBar.default" :pagePath="'/pages/index/index'"
-			@click.native="bindEdit('tabBar','default')"></tabBar>
-		<view v-if="site_config && !isIframe" class="site-config" @click="goICP">{{ site_config }}</view>
-		<view class="uni-p-b-98"></view>
-		<couponWindow style="position:relative;z-index:10000;" :window="isCouponShow" @onColse="couponClose"
-			:couponImage="couponObj.image" :couponList="couponObj.list"></couponWindow>
-		<!-- #ifdef APP-PLUS -->
-		<!-- <app-update v-if="!privacyStatus" ref="appUpdate" :force="true" :tabbar="false"></app-update> -->
-		<!-- #endif -->
-		<!-- #ifdef APP-PLUS -->
-		<view class="privacy-wrapper" v-if="privacyStatus">
-			<view class="privacy-box">
-				<view class="title">服务协议与隐私政策</view>
-				<view class="content">
-					请务必审慎阅读、充分理解“服务协议与 隐私政策”各条款，包括但不限于：为了 向你提供即时通讯、内容分享等服务，我 们需要收集你的设备信息、操作日志等个 人信息。你可以在“设置”中查看、变更、
-					删除个人信息并管理你的授权。<br>
-					你可以阅读<navigator url="/pages/users/privacy/index">《服务协议与隐私政策》</navigator>了解
-					详细信息。如你同意，请点击“我同意”开始接受我们的服务。
+					@click.native="bindEdit('tabBar','default')"></tabBar>
+				<view v-if="site_config && !isIframe" class="site-config" @click="goICP">{{ site_config }}</view>
+				<view class="uni-p-b-98"></view>
+				<couponWindow style="position:relative;z-index:10000;" :window="isCouponShow" @onColse="couponClose"
+					:couponImage="couponObj.image" :couponList="couponObj.list"></couponWindow>
+				<!-- #ifdef APP-PLUS -->
+				<!-- <app-update v-if="!privacyStatus" ref="appUpdate" :force="true" :tabbar="false"></app-update> -->
+				<!-- #endif -->
+				<!-- #ifdef APP-PLUS -->
+				<view class="privacy-wrapper" v-if="privacyStatus">
+					<view class="privacy-box">
+						<view class="title">服务协议与隐私政策</view>
+						<view class="content">
+							请务必审慎阅读、充分理解“服务协议与 隐私政策”各条款，包括但不限于：为了 向你提供即时通讯、内容分享等服务，我 们需要收集你的设备信息、操作日志等个 人信息。你可以在“设置”中查看、变更、
+							删除个人信息并管理你的授权。<br>
+							你可以阅读<navigator url="/pages/users/privacy/index">《服务协议与隐私政策》</navigator>了解
+							详细信息。如你同意，请点击“我同意”开始接受我们的服务。
+						</view>
+						<view class="btn-box">
+							<view class="btn-item" @click="confirmApp">我同意</view>
+							<view class="btn" @click="closeModel">残忍拒绝</view>
+						</view>
+					</view>
 				</view>
-				<view class="btn-box">
-					<view class="btn-item" @click="confirmApp">我同意</view>
-					<view class="btn" @click="closeModel">残忍拒绝</view>
-				</view>
+				<!-- #endif -->
 			</view>
-		</view>
-		<!-- #endif -->
-	</view>
 </template>
 <script>
 	import couponWindow from '@/components/couponWindow/index';
@@ -259,7 +259,7 @@
 				menus: {}, //导航
 				news: {}, //消息公告
 				activity: {}, //活动魔方
-				alive: {}, 
+				alive: {},
 				scrollBox: {}, //快速选择分类
 				titles: {}, //标题
 				goodList: {}, //商品列表(商品列表、首发新品、热门榜单、促销单品、精品推荐)
