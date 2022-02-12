@@ -14,3 +14,4 @@ crmeb/runtime/temp
 crmeb/runtime/cache
 crmeb/public/statics/download
 crmeb/.constant
+template/uni-app/unpackage
