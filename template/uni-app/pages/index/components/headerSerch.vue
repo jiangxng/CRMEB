@@ -5,7 +5,7 @@
 			<view class="logo">
 				<image class="skeleton-rect" :src="logoConfig" mode="heightFix"></image>
 				<view class="swiger">好物尽享 任你选择</view>
-				
+
 			</view>
 			<view class="input acea-row row-middle fillet skeleton-rect" hover-class="none" @click="goPage"><text
 					class="iconfont icon-sousuo"></text>
@@ -27,13 +27,8 @@
 	<!-- #ifdef MP  || APP-PLUS -->
 	<view v-if="isShow">
 		<view class="mp-header skeleton-rect" :style="{height:headH}">
-			<view class="sys-head" :style="{height:sysHeight}"></view>
 			<view class="serch-box" style="height: 48px;">
 				<view class="serch-wrapper row-middle">
-					<view class="logo">
-						<image class="skeleton-rect" :src="logoConfig" mode="heightFix"></image>
-						<view class="swiger">好物尽享 任你选择</view>
-					</view>
 					<navigator url="/pages/goods_search/index" class="input acea-row row-middle fillet"
 						hover-class="none"><text class="iconfont icon-sousuo"></text>
 						搜索商品</navigator>
@@ -47,7 +42,7 @@
 <script>
 	let app = getApp();
 	let statusBarHeight = uni.getSystemInfoSync().statusBarHeight * 2 + 'rpx';
-	let headHeight = uni.getSystemInfoSync().statusBarHeight * 2 + 170 + 'rpx';
+	let headHeight = uni.getSystemInfoSync().statusBarHeight * 2 + 68 + 'rpx';
 	import {
 		goPage
 	} from '@/libs/order.js'
@@ -119,7 +114,7 @@
 
 		.serch-wrapper {
 			padding: 20rpx 30rpx 0 30rpx;
-
+			
 			.logo {
 				margin-right: 30rpx;
 				display: flex;
@@ -190,7 +185,7 @@
 
 		.serch-wrapper {
 			height: 100%;
-			padding: 15rpx 30rpx 20rpx 30rpx;
+			
 
 			.logo {
 				margin-right: 30rpx;

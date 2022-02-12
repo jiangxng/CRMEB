@@ -113,7 +113,7 @@
 			if (system === 'android') {
 				this.mt = parseFloat(statusBarHeight) * 2 + 170
 			} else {
-				this.mt = parseFloat(statusBarHeight) * 2 + 168
+				this.mt = parseFloat(statusBarHeight) * 2 + 70
 			}
 
 			// #endif
