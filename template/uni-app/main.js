@@ -1,12 +1,3 @@
-// +----------------------------------------------------------------------
-// | CRMEB [ CRMEB赋能开发者，助力企业发展 ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2016~2021 https://www.crmeb.com All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed CRMEB并不是自由软件，未经许可不能去掉CRMEB相关版权
-// +----------------------------------------------------------------------
-// | Author: CRMEB Team <admin@crmeb.com>
-// +----------------------------------------------------------------------
 
 import Vue from 'vue'
 import App from './App'
@@ -15,26 +6,24 @@ import Cache from './utils/cache'
 import util from 'utils/util'
 import configs from './config/app.js'
 import socket from './libs/new_chat.js'
+import Auth from './libs/wechat';
 Vue.prototype.$util = util;
 Vue.prototype.$config = configs;
 Vue.prototype.$Cache = Cache;
 Vue.prototype.$eventHub = new Vue();
 Vue.prototype.$socket = new socket();
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+Vue.prototype.$wechat = Auth;
 import pageLoading from './components/pageLoading.vue'
 import skeleton from './components/skeleton/index.vue'
 
 Vue.component('skeleton', skeleton)
 Vue.component('pageLoading',pageLoading)
+
+
 // #ifdef H5
-
-
 import { parseQuery } from "./utils";
-import Auth from './libs/wechat';
 import { SPREAD } from './config/cache';
-Vue.prototype.$wechat = Auth;
-
-
 
 let cookieName = "VCONSOLE",
 	query = parseQuery(),
